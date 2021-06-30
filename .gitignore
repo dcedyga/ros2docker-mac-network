@@ -13,3 +13,7 @@
 
 # Dependency directories (remove the comment below to include it)
 # vendor/
+
+!docker-mac-network/config
+
+docker-mac-network/config/*
