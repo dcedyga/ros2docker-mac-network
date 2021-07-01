@@ -92,8 +92,11 @@ It has been tested with ros2 "galactic"
 ## know issues
 
 It may happen that the daemon doesn't display the information. This might be caused because when we started the terminal the openVPN wasn't connected (usually the first time). In order to solve the issue, stop and start the daemon and back to normal
+
     ```bash
     ros2 daemon stop
+    ```
+    ```bash
     ros2 daemon start
     ```
     <img src="images/daemon-start-stop.png" alt="daemon start stop" width="500"/>
