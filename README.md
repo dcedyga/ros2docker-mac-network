@@ -26,7 +26,7 @@ It has been tested with ros2 "galactic"
 
 - Connect to the docker-for-mac network
 
-    <img src="images/tunnelblick-connect.png" alt="tunnelblick connect" width="150"/><img src="images/tunnelblick-connected.png" alt="tunnelblick connected" width="150"/>
+    <img src="images/tunnelblick-connect.png" alt="tunnelblick connect" width="150"/>   <img src="images/tunnelblick-connected.png" alt="tunnelblick connected" width="150"/>
 
 - At this point you should be able to ping the discovery server
   ```bash
@@ -93,11 +93,11 @@ It has been tested with ros2 "galactic"
 
 It may happen that the daemon doesn't display the information. This might be caused because when we started the terminal the openVPN wasn't connected (usually the first time). In order to solve the issue, stop and start the daemon and back to normal
 
-    ```bash
-    ros2 daemon stop
-    ```
-    ```bash
-    ros2 daemon start
-    ```
-    <img src="images/daemon-start-stop.png" alt="daemon start stop" width="500"/>
+```bash
+ros2 daemon stop
+```
+```bash
+ros2 daemon start
+```
 
+<img src="images/node-info.png" alt="node info" width="500"/>
