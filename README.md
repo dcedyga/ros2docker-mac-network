@@ -100,4 +100,4 @@ ros2 daemon stop
 ros2 daemon start
 ```
 
-<img src="images/node-info.png" alt="node info" width="500"/>
+<img src="images/daemon-start-stop.png" alt="daemon start stop" width="500"/>
