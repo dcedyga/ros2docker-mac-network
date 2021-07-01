@@ -22,12 +22,12 @@ It has been tested with ros2 "galactic"
   - Create the fast-dds discovery server with ip 172.25.0.3
   - stop and start the ros2 daemon
 - Double click on docker-for-mac.ovpn to load the configuration in Tunnelblick.
-<img src="images/tunnelblick-uploadconfig.png" alt="tunnelblick upload config" width="150"/>
+<img src="images/tunnelblick-uploadconfig.png" alt="tunnelblick upload config" width="300"/>
 - Connect to the docker-for-mac network
-![tunnelblick-connect](images/tunnelblick-connect.png =100x100)![tunnelblick-connected](images/tunnelblick-connected.png =100x100)
+<img src="images/tunnelblick-connect.png" alt="tunnelblick connect" width="300"/><img src="images/tunnelblick-connected.png" alt="tunnelblick connected" width="300"/>
 - At this point you should be able to ping the discovery server
   ```bash
   ping 172.25.0.3
   ```
-![ping](images/ping.png =80px)
+<img src="images/ping.png" alt="ping fast-dds discovery server" width="300"/>
 
