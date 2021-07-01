@@ -1,28 +1,15 @@
-version: '2'
+version: '3'
 
 services:
-    
-    proxy:
-        build: .
-        ports:
-            - "127.0.0.1:13194:13194"
-            #- "127.0.0.1:13194:13194/udp"
-        # UDP did not work, probably because the source port changes all the time
-        #command: -v UDP4-RECVFROM:13194,fork UDP4-SENDTO:172.17.0.1:1194
-        command: TCP-LISTEN:13194,fork TCP:172.17.0.1:1194
-        restart: always
-
-    openvpn:
-        image: kylemanna/openvpn
-        volumes:
-            - .:/local
-            - ./config:/etc/openvpn
-        network_mode: host
-        cap_add:
-            - NET_ADMIN
+    ros2-fast-dds-discovery-server:
+        image: galactic-ros-desktop-go:1.16.2
         environment:
-            dest: docker-for-mac.ovpn
-            DEBUG: '1'
-        command: /local/helpers/run.sh
+            RMW_IMPLEMENTATION: rmw_fastrtps_cpp
+        command: fastdds discovery -i 0 -l 172.25.0.3 -p 11811
         restart: always
-
+        networks:
+            docker-mac-network_default:
+                ipv4_address: 172.25.0.3
+networks:
+    docker-mac-network_default:
+        external: true
