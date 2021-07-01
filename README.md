@@ -53,23 +53,23 @@ It has been tested with ros2 "galactic"
     ```bash
     ros2 run demo_nodes_cpp listener --ros-args --remap __node:=listener1
     ```
-     <img src="images/docker-listener1.png" alt="docker-listener1" width="350"/>
+     <img src="images/docker-listener1.png" alt="docker-listener1" width="500"/>
 
     and 
     ```bash
     ros2 run demo_nodes_cpp listener --ros-args --remap __node:=listener2
     ```
-    <img src="images/docker-listener2.png" alt="docker-listener2" width="350"/>
+    <img src="images/docker-listener2.png" alt="docker-listener2" width="500"/>
 
 - Run the talker in osx terminal
     ```bash
     ros2 run demo_nodes_cpp talker --ros-args --remap __node:=talker1
     ```
-    <img src="images/osx-talker.png" alt="osx talker" width="350"/>
+    <img src="images/osx-talker.png" alt="osx talker" width="500"/>
 
-    <img src="images/docker-listener1-rec.png" alt="docker listener1 receiving" width="350"/>
+    <img src="images/docker-listener1-rec.png" alt="docker listener1 receiving" width="500"/>
 
-    <img src="images/docker-listener2-rec.png" alt="docker listener2 receiving" width="350"/>
+    <img src="images/docker-listener2-rec.png" alt="docker listener2 receiving" width="500"/>
 
 ## daemon operations on extended network (docker-mac) 
 - List nodes
@@ -88,7 +88,7 @@ It has been tested with ros2 "galactic"
     ```bash
     ros2 node info /talker1
     ```
-    <img src="images/node-info.png" alt="node info" width="350"/>
+    <img src="images/node-info.png" alt="node info" width="500"/>
 ## know issues
 
 It may happen that the daemon doesn't display the information. This might be caused because when we started the terminal the openVPN wasn't connected (usually the first time). In order to solve the issue, stop and start the daemon and back to normal
@@ -96,5 +96,5 @@ It may happen that the daemon doesn't display the information. This might be cau
     ros2 daemon stop
     ros2 daemon start
     ```
-    <img src="images/daemon-start-stop.png" alt="daemon start stop" width="350"/>
+    <img src="images/daemon-start-stop.png" alt="daemon start stop" width="500"/>
 
